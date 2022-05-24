@@ -1,3 +1,61 @@
 /* =============
     Typography
 ============= */
+body{
+    font-family: 'Barlow';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+    margin:none;
+}
+
+
+header{
+    font-family: 'Barlow';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 20px;
+text-align: center;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+
+.herotext{
+    font-family: 'Barlow';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+text-align: center;
+}
+
+
+h2{
+    font-family: 'Barlow Semi Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+text-align: center;
+}
+
+h3{
+    font-family: 'Barlow';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+}
+
+
+h5{
+    font-family: 'Barlow';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
