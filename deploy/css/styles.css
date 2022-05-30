@@ -459,6 +459,7 @@ textarea {
 footer {
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-areas: "phone mail . social";
   background-color: #D1C9C7;
 }
 footer img {
@@ -470,15 +471,15 @@ footer img {
   display: grid;
   gap: 16px;
 }
-.card-grid article {
-  background-color: #fff;
-}
 .card-grid button {
   border: none;
 }
 .card-grid button img {
   width: 40px;
   height: 40px;
+}
+.card-grid article {
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .card-grid {
@@ -489,6 +490,63 @@ footer img {
     height: 320px;
   }
 }
+@media (min-width: 992px) {
+  .card-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "story story shop" "flora . shop" "flora cafe cafe";
+  }
+  .card-grid .ourstory {
+    grid-area: story;
+  }
+  .card-grid .ourstory .storycontain .storycontent .button {
+    display: flex;
+    justify-content: end;
+  }
+  .card-grid .shop {
+    grid-area: shop;
+  }
+  .card-grid .shop .shopcontain .button {
+    display: flex;
+    justify-content: center;
+  }
+  .card-grid .shop .shopcontain .button .shopphoto {
+    display: flex;
+    justify-content: center;
+  }
+  .card-grid .cafe {
+    grid-area: cafe;
+  }
+  .card-grid .cafe .cafecontain .button {
+    display: flex;
+    justify-content: end;
+  }
+}
+.card-grid .flora {
+  grid-area: flora;
+}
+.card-grid .flora .floracontain .button {
+  display: flex;
+  justify-content: center;
+}
+.card-grid .flora .floracontain .button .floraphoto {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+ul.a{grid-template-columns:100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr}
+
+    */
 .herotxt {
+  justify-content: center;
+}
+
+.about-contain .aboutcontent {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "aboutlist about1" "about2 .";
+}
+.about-contain .aboutcontent .abouttitle {
   justify-content: center;
 }

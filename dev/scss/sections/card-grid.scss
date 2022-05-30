@@ -3,20 +3,20 @@
     display:grid;
     gap: 16px;
     
-    
-    article{
-     background-color: $white;
-    }
-
     button{
        
         border: none;
-        
         img{
             width: 40px;
             height: 40px;
         }
     }
+    
+    article{
+     background-color: $white;
+    }
+
+   
 
     @include md{
         grid-template-columns: 50% 50%;
@@ -28,7 +28,69 @@
     }
     
     @include lg{
-       
-    }
-}
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-areas: 
+       "story story shop"
+       "flora . shop"
+       "flora cafe cafe";
+
+        .ourstory{
+            grid-area: story; 
+
+            .storycontain{
+                .storycontent{
+                    .button{
+                        display:flex;
+                        justify-content:end;
+                    }
+                }
+            }
+        }
+
+        .shop{
+            grid-area:shop;
+            .shopcontain{
+                .button{
+                    display:flex;
+                    justify-content:center;
+                
+                .shopphoto{
+                    display:flex;
+                    justify-content:center;
+                    }
+                }
+            }
+        }
+
+        .cafe{
+            grid-area:cafe;
+            .cafecontain{
+                    .button{
+                        display:flex;
+                        justify-content:end;
+                    }
+                }
+
+            }
+        }
+        
+        .flora{
+            grid-area:flora;
+            .floracontain{
+                .button{
+                    display:flex;
+                    justify-content:center;
+                
+                .floraphoto{
+                    display:flex;
+                    justify-content:center;
+                    }
+                }
+            }
+        }
+        }
+
+
+    
+
 

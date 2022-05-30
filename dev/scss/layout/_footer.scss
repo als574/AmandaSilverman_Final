@@ -4,6 +4,8 @@
 footer{
         display: grid;
     grid-template-columns: 50% 50%;
+    grid-template-areas: 
+    "phone mail . social";
     
     background-color: $darkbeige;
     img{
