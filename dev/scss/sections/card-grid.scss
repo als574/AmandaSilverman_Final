@@ -1,11 +1,18 @@
+
 .card-grid{
     background-color: $blushpink;
-    display:grid;
+    display:grid; 
     gap: 16px;
+    
+    
     
     button{
        
         border: none;
+        background: none;
+        
+       
+
         img{
             width: 40px;
             height: 40px;
@@ -17,80 +24,143 @@
     }
 
    
-
-    @include md{
-        grid-template-columns: 50% 50%;
-        img{ width: 332px;
+    @include sm{
+        img{
+            width: 332px;
             height: 320px;
-            
-            
+            display: flex;
+            margin: auto;
         }
+        p{
+            display: flex;
+            margin: 0px 68px 0px 68px;
+        }
+        button{
+            display: contents;
+        }
+    }
+    @include md{
+        
+          grid-template-columns: 50% 50%;
+        grid-template-areas:
+        "story shop"
+        "cafe flora";
+        
     }
     
     @include lg{
-       grid-template-columns: 1fr 1fr 1fr 1fr;
+       grid-template-columns: 1fr 1fr 1fr;
        grid-template-areas: 
        "story story shop"
-       "flora . shop"
+       "flora .  shop"
        "flora cafe cafe";
 
         .ourstory{
+            margin: 16px 120px 100px 16px;
             grid-area: story; 
+            padding: 16px;
 
             .storycontain{
-                .storycontent{
-                    .button{
-                        display:flex;
-                        justify-content:end;
-                    }
-                }
+                margin-top: -24px;
             }
-        }
+            .story-content{
+                margin: -360px 0px 240px 371px;   
 
+            }
+            .headline1{
+                
+            
+            }
+                        .storyphoto{
+                            display: flex;
+                            justify-content: left;
+                            padding: 16px;
+                            
+                        }   
+                    }
+                 
+                
+
+
+.story-button{
+    background-color: none;
+    display: flex;
+       justify-content: end;
+}
+        
         .shop{
+            margin:16px 120px 100px 16px;
+            padding:none;
             grid-area:shop;
+
             .shopcontain{
-                .button{
+                
+                .shop-content{
+                    justify-content: right;
+                 margin: 0px 25px 0px 30px;
+                }
+                .shop-button{
                     display:flex;
                     justify-content:center;
                 
+                    }
                 .shopphoto{
                     display:flex;
                     justify-content:center;
+                    padding:16px;
+                    
                     }
-                }
+                
             }
         }
 
         .cafe{
+            margin:16px 120px 100px 16px;
             grid-area:cafe;
+            padding: 16px;
             .cafecontain{
-                    .button{
-                        display:flex;
-                        justify-content:end;
-                    }
-                }
-
+                margin-top: -24px;
             }
-        }
+            .cafe-content{
+                margin: -360px 0px 240px 371px;
+                }
+                .cafephoto{
+                    display: flex;
+                            justify-content: left;
+                            padding: 16px;
+                            
+                }
+            }
+
+            .cafebutton{
+                background-color: none;
+                display: flex;
+                   justify-content: end;
+            }
         
         .flora{
+            margin:16px 120px 100px 16px;
+            padding:none;
             grid-area:flora;
             .floracontain{
-                .button{
+                
+                .flora-content{
+                    justify-content: right;
+                 margin: 0px 25px 0px 30px;
+                }
+                .flora-button{
                     display:flex;
                     justify-content:center;
                 
+                    }
                 .floraphoto{
                     display:flex;
                     justify-content:center;
+                    padding:16px;
+                    
                     }
-                }
+                
             }
         }
-        }
-
-
-    
-
-
+}
+}

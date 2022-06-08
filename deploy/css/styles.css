@@ -473,6 +473,7 @@ footer img {
 }
 .card-grid button {
   border: none;
+  background: none;
 }
 .card-grid button img {
   width: 40px;
@@ -481,63 +482,124 @@ footer img {
 .card-grid article {
   background-color: #fff;
 }
-@media (min-width: 768px) {
-  .card-grid {
-    grid-template-columns: 50% 50%;
-  }
+@media (min-width: 576px) {
   .card-grid img {
     width: 332px;
     height: 320px;
+    display: flex;
+    margin: auto;
+  }
+  .card-grid p {
+    display: flex;
+    margin: 0px 68px 0px 68px;
+  }
+  .card-grid button {
+    display: contents;
+  }
+}
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "story shop" "cafe flora";
   }
 }
 @media (min-width: 992px) {
   .card-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "story story shop" "flora . shop" "flora cafe cafe";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "story story shop" "flora .  shop" "flora cafe cafe";
   }
   .card-grid .ourstory {
+    margin: 16px 120px 100px 16px;
     grid-area: story;
+    padding: 16px;
   }
-  .card-grid .ourstory .storycontain .storycontent .button {
+  .card-grid .ourstory .storycontain {
+    margin-top: -24px;
+  }
+  .card-grid .ourstory .story-content {
+    margin: -360px 0px 240px 371px;
+  }
+  .card-grid .ourstory .storyphoto {
+    display: flex;
+    justify-content: left;
+    padding: 16px;
+  }
+  .card-grid .story-button {
+    background-color: none;
     display: flex;
     justify-content: end;
   }
   .card-grid .shop {
+    margin: 16px 120px 100px 16px;
+    padding: none;
     grid-area: shop;
   }
-  .card-grid .shop .shopcontain .button {
+  .card-grid .shop .shopcontain .shop-content {
+    justify-content: right;
+    margin: 0px 25px 0px 30px;
+  }
+  .card-grid .shop .shopcontain .shop-button {
     display: flex;
     justify-content: center;
   }
-  .card-grid .shop .shopcontain .button .shopphoto {
+  .card-grid .shop .shopcontain .shopphoto {
     display: flex;
     justify-content: center;
+    padding: 16px;
   }
   .card-grid .cafe {
+    margin: 16px 120px 100px 16px;
     grid-area: cafe;
+    padding: 16px;
   }
-  .card-grid .cafe .cafecontain .button {
+  .card-grid .cafe .cafecontain {
+    margin-top: -24px;
+  }
+  .card-grid .cafe .cafe-content {
+    margin: -360px 0px 240px 371px;
+  }
+  .card-grid .cafe .cafephoto {
+    display: flex;
+    justify-content: left;
+    padding: 16px;
+  }
+  .card-grid .cafebutton {
+    background-color: none;
     display: flex;
     justify-content: end;
   }
-}
-.card-grid .flora {
-  grid-area: flora;
-}
-.card-grid .flora .floracontain .button {
-  display: flex;
-  justify-content: center;
-}
-.card-grid .flora .floracontain .button .floraphoto {
-  display: flex;
-  justify-content: center;
+  .card-grid .flora {
+    margin: 16px 120px 100px 16px;
+    padding: none;
+    grid-area: flora;
+  }
+  .card-grid .flora .floracontain .flora-content {
+    justify-content: right;
+    margin: 0px 25px 0px 30px;
+  }
+  .card-grid .flora .floracontain .flora-button {
+    display: flex;
+    justify-content: center;
+  }
+  .card-grid .flora .floracontain .floraphoto {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+  }
 }
 
-/*
-ul.a{grid-template-columns:100%;
-    grid-template-rows: 1fr 1fr 1fr 1fr}
+.carousel {
+  style: none;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.carousel img {
+  width: 12px;
+  height: 12px;
+  border: none;
+}
 
-    */
 .herotxt {
   justify-content: center;
 }
