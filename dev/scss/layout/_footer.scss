@@ -2,10 +2,23 @@
     Footer
 ============= */
 footer{
-        display: grid;
-    grid-template-columns: 50% 50%;
+        .mail{
+            display: flex;
+        justify-content: right ;
+        }
+
+        .priv{display: flex;
+            justify-content: right ;
+        }
+        .rights{
+            display: flex;
+        justify-content: right ;
+        }
+    /*grid-template-columns: 50% 50%;
     grid-template-areas: 
-    "phone mail . social";
+    "phone mail"
+    "social priv"; */
+   
     
     background-color: $darkbeige;
     img{

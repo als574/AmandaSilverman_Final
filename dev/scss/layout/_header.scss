@@ -7,3 +7,19 @@
         width: fit-content;
     }
 }
+.logo{
+    display: grid;
+    margin-right: 50%;
+    
+}
+@include lg{
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "nav1 nav2 nav3 nav4";
+    margin-left: 50%;
+}
+}
+

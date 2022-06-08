@@ -453,14 +453,40 @@ textarea {
   width: fit-content;
 }
 
+.logo {
+  display: grid;
+  margin-right: 50%;
+}
+
+@media (min-width: 992px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav1 nav2 nav3 nav4";
+    margin-left: 50%;
+  }
+}
 /* =============
     Footer
 ============= */
 footer {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-areas: "phone mail . social";
+  /*grid-template-columns: 50% 50%;
+  grid-template-areas: 
+  "phone mail"
+  "social priv"; */
   background-color: #D1C9C7;
+}
+footer .mail {
+  display: flex;
+  justify-content: right;
+}
+footer .priv {
+  display: flex;
+  justify-content: right;
+}
+footer .rights {
+  display: flex;
+  justify-content: right;
 }
 footer img {
   width: fit-content;
@@ -607,7 +633,7 @@ footer img {
 .about-contain .aboutcontent {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-areas: "aboutlist about1" "about2 .";
+  grid-template-areas: "aboutlist about1" "about2 aboutdescrip";
 }
 .about-contain .aboutcontent .abouttitle {
   justify-content: center;
