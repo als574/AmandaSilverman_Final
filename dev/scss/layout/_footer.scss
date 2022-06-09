@@ -2,8 +2,99 @@
     Footer
 ============= */
 footer{
+    background-color: $darkbeige;
+    display: grid;
 
-    .phone, .comp, .rights{
+    img{
+        width: 45px;
+    }
+    
+
+   // .words{
+       .ftcontent{
+
+        display: grid;
+        grid-template-columns: 20% 30% auto 20%;
+        grid-template-areas: 
+        "phone mail . social";
+    
+
+        }
+
+        .phone{
+            grid-area: phone;
+        }
+
+        .mail{
+            grid-area: mail;
+        }
+
+        .social{
+            grid-area: social;
+            text-align: right;
+            padding-top: 25px;
+        }
+
+}
+   /* .vault{
+        grid-area: 2022;
+    }
+
+    .all{
+        grid-area: all;
+    }
+
+    .priv{
+        grid-area: priv;
+    }
+
+    .ftcontent{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: right;
+
+    }
+*/
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*.phone, .comp, .rights{
         justify-content: left;
     }
 
@@ -65,9 +156,3 @@ footer{
    // "phone mail social"
    // "comp rights priv"; 
    
-    
-    background-color: $darkbeige;
-    img{
-        width: 45px;
-    }
-}
