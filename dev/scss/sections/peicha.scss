@@ -1,0 +1,21 @@
+.peicha{
+    display: flex;
+    margin: auto;
+    @include sm{
+        width: 393px;
+        height: 585px;
+    }
+    @include lg{
+        width: 613px;
+        height: 917px;
+    }
+    @include xl{
+        width: 696px;
+        height: 1039px;
+    }
+}
+
+.foundertext{
+    display: flex;
+    margin: auto;
+}

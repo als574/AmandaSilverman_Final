@@ -1,0 +1,33 @@
+.diff{
+    background-color: $blushpink;
+    .diffheader{
+        display: flex;
+        justify-content: center;
+    }
+    .diffsub{
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+    }
+
+    .mission{
+    
+    }
+}
+
+.diffphoto{
+    display: flex;
+    margin: auto;
+    @include sm{
+        width: 393px;
+        height: 491px;
+    }
+    @include lg{
+        width: 616px;
+        height: 790px;
+    }
+    @include xl{
+        width: 696px;
+        height: 893px;
+    }
+}

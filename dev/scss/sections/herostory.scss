@@ -1,0 +1,18 @@
+.herostory{
+    display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". herocontent .";
+    .herocontent{
+        grid-area: herocontent;
+    }
+}
+
+.hp2, .hp3{
+    font-weight: 400;
+}
+
+.herotitle{
+    display: flex;
+    justify-content: center;
+}
+

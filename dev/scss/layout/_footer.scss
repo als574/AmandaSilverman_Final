@@ -2,26 +2,72 @@
     Footer
 ============= */
 footer{
-        .mail{
-            display: flex;
-        justify-content: right ;
+
+    .phone, .comp, .rights{
+        justify-content: left;
+    }
+
+    .social{
+        img{
+            padding-left: 5px;
+        }
+        display: 100%;
+        margin-left: 89%;
+        margin-top: -115px;
+        padding: 5px;
+    }
+
+    .priv{
+        display: 100%;
+        margin-left: 91%;
+        margin-top: -20px;
+        padding: 10px;
+    }
+
+    .rights{
+        
+        margin-left: 200px;
+    
+        margin-top: -45px;
+    }
+        /*.mail{
+          // display: flex;
+       // justify-content: right ;
+        grid-area: mail;
         }
 
-        .priv{display: flex;
-            justify-content: right ;
+        .priv{
+            //display: flex;
+          // justify-content: right ;
+            grid-area: priv;
         }
+
         .rights{
-            display: flex;
-        justify-content: right ;
+          // display: flex;
+        //justify-content: right ;
+        grid-area: rights;
         }
-    /*grid-template-columns: 50% 50%;
-    grid-template-areas: 
-    "phone mail"
-    "social priv"; */
+
+        .phone{
+            grid-area: phone;
+        }
+
+        .social{
+            grid-area: social;
+        }
+
+        .comp{
+            grid-area: comp;
+        } */
+   // display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
+    //grid-template-areas: 
+   // "phone mail social"
+   // "comp rights priv"; 
    
     
     background-color: $darkbeige;
     img{
-        width:fit-content;
+        width: 45px;
     }
 }

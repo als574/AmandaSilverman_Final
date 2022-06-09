@@ -381,6 +381,8 @@ header {
   text-align: center;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: #4A3730;
+  text-transform: uppercase;
 }
 
 .herotext {
@@ -392,13 +394,24 @@ header {
   text-align: center;
 }
 
-h2 {
+h1 {
   font-family: "Barlow Semi Condensed";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 40px;
   line-height: 48px;
   text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -407,6 +420,7 @@ h3 {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
+  text-transform: uppercase;
 }
 
 h5 {
@@ -446,50 +460,109 @@ textarea {
 /* =============
     Header
 ============= */
-.container {
+header {
   background-color: #D1C9C7;
+  grid-template-columns: 40px auto 40px;
+  grid-template-areas: ". header .";
 }
-.container img {
+header .logo {
   width: fit-content;
 }
-
-.logo {
+header .nav {
+  display: flex;
+  justify-content: end;
+  padding-top: 8px;
+  padding-right: 16px;
+}
+header .nav .nav1, header .nav .nav2, header .nav .nav3, header .nav .nav4 {
+  padding: 5px;
+  padding-left: 30px;
+}
+header .content {
   display: grid;
-  margin-right: 50%;
+  grid-template-columns: 20% auto;
+  grid-template-areas: "logo nav";
 }
 
-@media (min-width: 992px) {
-  .nav {
+/*.container{
+
+    img{
+        display:grid;
+        width: fit-content;
+        margin-right: 50%;
+        padding: none;
+
+
+    }
+}
+
+.nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "nav1 nav2 nav3 nav4";
-    margin-left: 50%;
-  }
+    grid-template-areas: 
+    "nav1 nav2 nav3 nav4";
+    margin-left: 50%; 
 }
+*/
 /* =============
     Footer
 ============= */
 footer {
-  /*grid-template-columns: 50% 50%;
-  grid-template-areas: 
-  "phone mail"
-  "social priv"; */
+  /*.mail{
+     // display: flex;
+  // justify-content: right ;
+   grid-area: mail;
+   }
+
+   .priv{
+       //display: flex;
+     // justify-content: right ;
+       grid-area: priv;
+   }
+
+   .rights{
+     // display: flex;
+   //justify-content: right ;
+   grid-area: rights;
+   }
+
+   .phone{
+       grid-area: phone;
+   }
+
+   .social{
+       grid-area: social;
+   }
+
+   .comp{
+       grid-area: comp;
+   } */
   background-color: #D1C9C7;
 }
-footer .mail {
-  display: flex;
-  justify-content: right;
+footer .phone, footer .comp, footer .rights {
+  justify-content: left;
+}
+footer .social {
+  display: 100%;
+  margin-left: 89%;
+  margin-top: -115px;
+  padding: 5px;
+}
+footer .social img {
+  padding-left: 5px;
 }
 footer .priv {
-  display: flex;
-  justify-content: right;
+  display: 100%;
+  margin-left: 91%;
+  margin-top: -20px;
+  padding: 10px;
 }
 footer .rights {
-  display: flex;
-  justify-content: right;
+  margin-left: 200px;
+  margin-top: -45px;
 }
 footer img {
-  width: fit-content;
+  width: 45px;
 }
 
 .card-grid {
@@ -534,6 +607,9 @@ footer img {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "story story shop" "flora .  shop" "flora cafe cafe";
   }
+  .card-grid img {
+    margin: 0;
+  }
   .card-grid .ourstory {
     margin: 16px 120px 100px 16px;
     grid-area: story;
@@ -543,7 +619,7 @@ footer img {
     margin-top: -24px;
   }
   .card-grid .ourstory .story-content {
-    margin: -360px 0px 240px 371px;
+    margin: -345px 0px 240px 300px;
   }
   .card-grid .ourstory .storyphoto {
     display: flex;
@@ -562,7 +638,7 @@ footer img {
   }
   .card-grid .shop .shopcontain .shop-content {
     justify-content: right;
-    margin: 0px 25px 0px 30px;
+    margin: 0px 25px 0px -50px;
   }
   .card-grid .shop .shopcontain .shop-button {
     display: flex;
@@ -582,7 +658,7 @@ footer img {
     margin-top: -24px;
   }
   .card-grid .cafe .cafe-content {
-    margin: -360px 0px 240px 371px;
+    margin: -345px 0px 240px 300px;
   }
   .card-grid .cafe .cafephoto {
     display: flex;
@@ -600,8 +676,8 @@ footer img {
     grid-area: flora;
   }
   .card-grid .flora .floracontain .flora-content {
-    justify-content: right;
-    margin: 0px 25px 0px 30px;
+    justify-content: left;
+    margin: 0px 25px 0px -50px;
   }
   .card-grid .flora .floracontain .flora-button {
     display: flex;
@@ -615,7 +691,7 @@ footer img {
 }
 
 .carousel {
-  style: none;
+  list-style: none;
   display: flex;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -630,11 +706,138 @@ footer img {
   justify-content: center;
 }
 
+.about-contain .abouttitle {
+  display: flex;
+  justify-content: center;
+}
 .about-contain .aboutcontent {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas: "aboutlist about1" "about2 aboutdescrip";
 }
-.about-contain .aboutcontent .abouttitle {
+.about-contain .aboutlist {
+  grid-area: aboutlist;
+}
+.about-contain .about1 {
+  grid-area: about1;
+}
+.about-contain .about2 {
+  grid-area: about2;
+}
+.about-contain .aboutdescrip {
+  grid-area: aboutdescrip;
+}
+@media (min-width: 768px) {
+  .about-contain img {
+    width: 289px;
+    height: 280px;
+  }
+}
+@media (min-width: 992px) {
+  .about-contain img {
+    width: 460px;
+    height: 433px;
+  }
+}
+
+.herostory {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". herocontent .";
+}
+.herostory .herocontent {
+  grid-area: herocontent;
+}
+
+.hp2, .hp3 {
+  font-weight: 400;
+}
+
+.herotitle {
+  display: flex;
   justify-content: center;
+}
+
+.diff {
+  background-color: #E9D3DA;
+}
+.diff .diffheader {
+  display: flex;
+  justify-content: center;
+}
+.diff .diffsub {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+}
+.diffphoto {
+  display: flex;
+  margin: auto;
+}
+@media (min-width: 576px) {
+  .diffphoto {
+    width: 393px;
+    height: 491px;
+  }
+}
+@media (min-width: 992px) {
+  .diffphoto {
+    width: 616px;
+    height: 790px;
+  }
+}
+@media (min-width: 1200px) {
+  .diffphoto {
+    width: 696px;
+    height: 893px;
+  }
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style: none;
+  /*display: flex;
+  align-items: flex-end;
+  padding: 5px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "triroast randomtea boltedblue" "oldblood stitchprism crustvegan" "zoet cuttalossa nuance";
+}
+ul img {
+  width: 40px;
+  height: 40px;
+  margin: 20px 200px 0px 20px;
+}
+
+.peicha {
+  display: flex;
+  margin: auto;
+}
+@media (min-width: 576px) {
+  .peicha {
+    width: 393px;
+    height: 585px;
+  }
+}
+@media (min-width: 992px) {
+  .peicha {
+    width: 613px;
+    height: 917px;
+  }
+}
+@media (min-width: 1200px) {
+  .peicha {
+    width: 696px;
+    height: 1039px;
+  }
+}
+
+.foundertext {
+  display: flex;
+  margin: auto;
 }

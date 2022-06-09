@@ -1,25 +1,52 @@
 /* =============
     Header
 ============= */
-.container{
+
+header{
     background-color: $darkbeige;
-    img{
+    grid-template-columns: 40px auto 40px;
+    grid-template-areas: ". header .";
+    
+    .logo{
         width: fit-content;
     }
+    .nav{
+        display:flex;
+        justify-content: end;
+        padding-top: 8px;
+        padding-right: 16px;
+        .nav1, .nav2, .nav3, .nav4 {
+            padding: 5px;
+            padding-left: 30px;
+            
+        }
+    }
+    .content{
+        display:grid;
+        grid-template-columns: 20% auto;
+        grid-template-areas:
+        "logo nav"
+    }
+
+
 }
-.logo{
-    display: grid;
-    margin-right: 50%;
+/*.container{
     
+    img{
+        display:grid;
+        width: fit-content;
+        margin-right: 50%;
+        padding: none;
+        
+
+    }
 }
-@include lg{
 
 .nav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "nav1 nav2 nav3 nav4";
-    margin-left: 50%;
+    margin-left: 50%; 
 }
-}
-
+*/
